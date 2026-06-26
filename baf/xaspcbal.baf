@@ -1,0 +1,23 @@
+IF
+	Global("XASPC1", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		//DisplayStringHead(Player1, ~XASPC1~)
+		ActionOverride(Player1, ReallyForceSpellRES("xaspc01", Myself))
+		SetGlobal("XASPC1", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Global("XASPC2", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		//DisplayStringHead(Player1, ~XASPC2~)
+		ActionOverride(Player1, ReallyForceSpellRES("xaspc02", Myself))
+		SetGlobal("XASPC2", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
