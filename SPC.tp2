@@ -32,25 +32,53 @@ WRITE_LONG 0x8 RESOLVE_STR_REF(@2)
 COPY_EXISTING ~xaspc02.spl~ ~override~
 WRITE_LONG 0x8 RESOLVE_STR_REF(@3)
 
-COPY_EXISTING ~SPIN823.spl~ ~override~
-LPF ADD_SPELL_EFFECT
-	INT_VAR
-		opcode = 265
-		target = 1
-		parameter1 = 1
-	STR_VAR
-		resource = ~XASPC1~
-END
+//{ Slayer Change
+	COPY_EXISTING ~SPIN823.spl~ ~override~
+	LPF ADD_SPELL_EFFECT
+		INT_VAR
+			opcode = 265
+			target = 1
+			parameter1 = 1
+		STR_VAR
+			resource = ~XASPC1~
+	END
+//}
 
-COPY_EXISTING ~SPIN718.spl~ ~override~
-LPF ADD_SPELL_EFFECT
-	INT_VAR
-		opcode = 265
-		target = 1
-		parameter1 = 1
-	STR_VAR
-		resource = ~XASPC2~
-END
+//{ Slayer Change (Spellhold)
+	COPY_EXISTING ~SPIN783.spl~ ~override~
+	LPF ADD_SPELL_EFFECT
+		INT_VAR
+			opcode = 265
+			target = 1
+			parameter1 = 1
+		STR_VAR
+			resource = ~XASPC1~
+	END
+//}
+
+//{ Undo Slayer Change
+	COPY_EXISTING ~SPIN718.spl~ ~override~
+	LPF ADD_SPELL_EFFECT
+		INT_VAR
+			opcode = 265
+			target = 1
+			parameter1 = 1
+		STR_VAR
+			resource = ~XASPC2~
+	END
+//}
+
+//{ Undo Slayer Change (Spellhold)
+	COPY_EXISTING ~SPIN718a.spl~ ~override~
+	LPF ADD_SPELL_EFFECT
+		INT_VAR
+			opcode = 265
+			target = 1
+			parameter1 = 1
+		STR_VAR
+			resource = ~XASPC2~
+	END
+//}
 
 EXTEND_BOTTOM ~baldur.bcs~ ~override/xaspcbal.bcs~
 EXTEND_BOTTOM ~baldur25.bcs~ ~override/xaspcbal.bcs~
