@@ -30,6 +30,10 @@ foreach($folder in $folders){
 
 Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
 Copy-Item -Path "Discord Server.url" -Destination $modPath
+Copy-Item -Path "PayPal.url" -Destination $modPath
+Copy-Item -Path "Venmo.url" -Destination $modPath
+Copy-Item -Path "release notes.md" -Destination $modPath
+Copy-Item -Path "readme.md" -Destination $modPath
 
 Get-Date -Format "yyyy-MM-dd HH:mm K" > pkgdate.txt
 
