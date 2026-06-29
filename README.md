@@ -7,7 +7,7 @@ This mod changes your character's in-game portait when they are transformed into
 If you want to use a different portrait, simply replace the xaslayer.bmp file located in the bmp folder.
 
 Installation Instructions
-- Download the release archive (https://github.com/LCA-EET/https://github.com/LCA-EET/BG2EE-Slayer-Portrait-Change/releases) and extract the contents to the game directory containing Baldur.exe.
+- Download the release archive (https://github.com/LCA-EET/BG2EE-Slayer-Portrait-Change/releases) and extract the contents to the game directory containing Baldur.exe.
 
 Windows
 - Run setup-SPC.exe
