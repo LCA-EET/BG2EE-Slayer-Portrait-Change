@@ -57,11 +57,8 @@ for ($i = 0; $i -lt $weiduApps.Length; $i++) {
 		7z a -mx=9 $Target $Source
 	}
 
-	Remove-Item -LiteralPath $basePath -Force -Recurse
 	Get-FileHash $archive -Algorithm SHA256 > SHA256.txt
-
 	Copy-Item -Path $archive -Destination ("\\nas.home.lan\smbuser\Home\Installers\" + $archive)
-	
 }
 
 Remove-Item -LiteralPath $basePath -Force -Recurse
